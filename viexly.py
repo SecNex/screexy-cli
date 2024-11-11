@@ -12,8 +12,7 @@ def welcome():
 
 welcome()
 
-
-cli = CLI(config=Configuration("viexly.conf"))
+cli = CLI(config=Configuration("viexly.tst.conf"))
 
 args = Arguments(cli=cli)
 try:

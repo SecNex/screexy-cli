@@ -41,6 +41,12 @@ class Arguments:
         self.__kiosk_wizard = self.__kiosk_sub.add_parser("wizard", help="run the kiosk wizard")
         self.__kiosk_clear = self.__kiosk_sub.add_parser("clear", help="clear all kiosk items")
 
+        self.__tools = self.__subparsers.add_parser("tools", help="manage the tools")
+        self.__tools_sub = self.__tools.add_subparsers(dest="tools_command", title="tools commands", description="valid tools commands", help="additional help")
+        self.__tools_thumbnail = self.__tools_sub.add_parser("thumbnail", help="generate thumbnails for videos")
+        self.__tools_thumbnail.add_argument("--source", help="specify the path to the videos", metavar="VIDEO_PATH", dest="tools_thumbnail_video_path", type=str, default=None)
+        self.__tools_thumbnail.add_argument("--target", help="specify the path to the media", metavar="MEDIA_PATH", dest="tools_thumbnail_media_path", type=str, default=None)
+
     def __parse(self) -> argparse.Namespace:
         return self.__parser.parse_args()
 
@@ -78,5 +84,10 @@ class Arguments:
                 return
             if args.kiosk_command == "clear":
                 self.__cli.clear()
+                return
+            print("No arguments provided.")
+        if args.command == "tools":
+            if args.tools_command == "thumbnail":
+                self.__cli.thumbnail(args.tools_thumbnail_video_path, args.tools_thumbnail_media_path)
                 return
             print("No arguments provided.")
