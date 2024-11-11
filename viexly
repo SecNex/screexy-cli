@@ -1,7 +1,0 @@
-#!/bin/bash
-
-APP_PATH=/etc/viexly/cli
-
-clear
-
-python3 viexly.py "$@"

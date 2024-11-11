@@ -243,7 +243,7 @@ class Media:
             json.dump(__media, file)
 
 if __name__ == "__main__":
-    config = Configuration("config/viexly.conf")
+    config = Configuration("config/screexy.conf")
     for section in config.list_sections():
         for key, value in config.get_section(section).items():
             print(f"[{section}] {key}: {value}")

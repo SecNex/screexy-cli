@@ -7,12 +7,12 @@ console = Console()
 
 def welcome():
     print()
-    console.print("👋 Welcome to the Viexly CLI!!", style="bold")
+    console.print("👋 Welcome to the Screexy CLI!!", style="bold")
     print()
 
 welcome()
 
-cli = CLI(config=Configuration("viexly.tst.conf"))
+cli = CLI(config=Configuration("screexy.tst.conf"))
 
 args = Arguments(cli=cli)
 try:

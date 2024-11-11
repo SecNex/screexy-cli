@@ -5,10 +5,10 @@ from .cli import CLI
 class Arguments:
     def __init__(self, cli: CLI) -> None:
         self.__cli = cli
-        self.__parser = argparse.ArgumentParser(prog="viexly", description="Viexly CLI")
+        self.__parser = argparse.ArgumentParser(prog="screexy", description="Screexy CLI")
         self.__subparsers = self.__parser.add_subparsers(dest="command", title="commands", description="valid commands", help="additional help")
         self.__config = self.__subparsers.add_parser("config", help="manage the configuration file")
-        self.__config.add_argument("-f", "--file", help="specify the configuration file", metavar="FILE", default="viexly.conf", dest="config_file")
+        self.__config.add_argument("-f", "--file", help="specify the configuration file", metavar="FILE", default="screexy.conf", dest="config_file")
         self.__config_group = self.__config.add_mutually_exclusive_group()
         self.__config_group.add_argument("-a", "--all", action="store_true", help="list all sections in the configuration file", dest="config_all")
         self.__config_group.add_argument("-s", "--section", help="specify a section to view", metavar="SECTION", dest="config_section")
