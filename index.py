@@ -7,13 +7,13 @@ console = Console()
 
 def welcome():
     print()
-    console.print("👋 Welcome to the EdgeSight CLI!!", style="bold")
+    console.print("👋 Welcome to the Viexly CLI!!", style="bold")
     print()
 
 welcome()
 
 
-cli = CLI(config=Configuration("edgesight.conf"))
+cli = CLI(config=Configuration("viexly.conf"))
 
 args = Arguments(cli=cli)
 try:

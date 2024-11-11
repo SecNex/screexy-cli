@@ -1,5 +1,5 @@
 #!/bin/bash
 
-APP_PATH=/etc/edgesight/cli
+APP_PATH=/etc/viexly/cli
 
 python3 index.py "$@"
