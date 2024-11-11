@@ -1,0 +1,5 @@
+#!/bin/bash
+
+APP_PATH=/etc/edgesight/cli
+
+python3 index.py "$@"
