@@ -7,12 +7,12 @@ console = Console()
 
 def welcome():
     print()
-    console.print("👋 Welcome to the Screexy CLI!!", style="bold")
+    console.print("👋 Welcome to the ShiftIQ CLI!!", style="bold")
     print()
 
 welcome()
 
-cli = CLI(config=Configuration("screexy.tst.conf"))
+cli = CLI(config=Configuration("shifiq.tst.conf"))
 
 args = Arguments(cli=cli)
 try:

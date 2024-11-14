@@ -1,16 +1,16 @@
-# Screexy CLI
+# ShiftIQ CLI
 
-This is a simple CLI for Screexy. It is written in Python and makes the usage of Screexy Configuration easier.
+This is a simple CLI for ShiftIQ. It is written in Python and makes the usage of ShiftIQ Configuration easier.
 
 ## Installation
 
 To install the CLI, you need to clone the repository and install the requirements.
 
 ```bash
-git clone https://github.com/SecNex/screexy-cli.git
-cd screexy-cli
+git clone https://github.com/SecNex/shifiq-cli.git
+cd shifiq-cli
 pip install -r requirements.txt
-chmod +x screexy
+chmod +x shifiq
 ```
 
 **Note:** You need to have Python3 installed on your system.
@@ -21,10 +21,10 @@ python3 --version
 
 ## Usage
 
-To use the CLI, you need to run the `screexy-cli.py` script.
+To use the CLI, you need to run the `shifiq-cli.py` script.
 
 ```bash
-./screexy --help
+./shifiq --help
 ```
 
 ### Examples
@@ -32,5 +32,5 @@ To use the CLI, you need to run the `screexy-cli.py` script.
 **List all tiles**
 
 ```bash
-./screexy kiosk list
+./shifiq kiosk list
 ```

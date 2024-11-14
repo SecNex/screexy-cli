@@ -1,7 +1,0 @@
-#!/bin/bash
-
-APP_PATH=/etc/screexy/cli
-
-clear
-
-python3 screexy.py "$@"
